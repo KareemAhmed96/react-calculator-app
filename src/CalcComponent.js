@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes, { func } from "prop-types";
 import ScreenComponent from "./ScreenComponent"
-import ButtonComponent from "./ButtonComponent"
+import KeyPadComponent from "./KeyPadComponent"
 
 
 class CalcComponent extends React.Component {
@@ -79,7 +79,7 @@ class CalcComponent extends React.Component {
             <div>
                 <h1>Calculator Component</h1>
                 <ScreenComponent res={this.state.screen} />
-                <ButtonComponent clickHandler={this.getClickedButtton} eval={this.evaluate} pressed={this.state.pressed} />
+                <KeyPadComponent clickHandler={this.getClickedButtton} eval={this.evaluate} pressed={this.state.pressed} />
             </div>
         )
     }
