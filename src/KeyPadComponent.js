@@ -28,39 +28,20 @@ class KeyPadComponent extends React.Component {
                 <h1>Button Component</h1>
                 <div>Pressed Button: {this.props.pressed}</div>
                 <br/>
-                
+
                 <table>
                     <tbody>
-                        <tr>
-                            {buttons[0].map(
-                            (ele, index, array) => 
-                               <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
-                            )}
-                        </tr>
-                        <tr>
-                            {buttons[1].map(
-                            (ele, index, array) => 
-                                <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
-                            )}
-                        </tr>
-                        <tr>
-                            {buttons[2].map(
-                            (ele, index, array) => 
-                                <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
-                            )}
-                        </tr>
-                        <tr>
-                            {buttons[3].map(
-                            (ele, index, array) => 
-                                <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
-                            )}
-                        </tr>
-                        <tr>
-                            {buttons[4].map(
-                            (ele, index, array) => 
-                                <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
-                            )}
-                        </tr>
+                        
+                        {buttons.map(
+                            (ele, index) =>
+                                <tr>
+                                    {buttons[index].map(
+                                        (ele) => 
+                                            <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
+                                    )}
+                                </tr>
+                        )}
+                        
                     </tbody>
                 </table>
 
