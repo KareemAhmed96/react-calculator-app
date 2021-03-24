@@ -4,23 +4,12 @@ import ActionButtonComponent from "./ActionButtonComponent"
 import NumberButtonComponent from "./NumberButtonComponent"
 
 
-let numbersArray = [
-    ['7', '8', '9'],
-    ['4', '5', '6'],
-    ['1', '2', '3'],
-    ['0', '.']
-]
-  
-let horizontalOptions = [
-    'AC', '+/-', '%'
-]
-  
-let verticalOptions = [
-    '/',
-    '*',
-    '-',
-    '+',
-    '='
+let buttons = [
+    ['AC', '+/-', '%', '/'],
+    ['7', '8', '9', '*'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '=']
 ]
 
 
@@ -43,37 +32,37 @@ class ButtonComponent extends React.Component {
                 <table>
                     <tbody>
                         <tr>
-                            <td><ActionButtonComponent display={horizontalOptions[0]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={horizontalOptions[1]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={horizontalOptions[2]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={verticalOptions[0]} clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[0][0]} clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[0][1]} clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[0][2]} clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[0][3]} clickHandler={this.props.clickHandler}/></td>
                         </tr>
 
                         <tr>
-                            <td><NumberButtonComponent display={numbersArray[0][0]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[0][1]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[0][2]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={verticalOptions[1]} clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[1][0]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[1][1]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[1][2]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[1][3]}  clickHandler={this.props.clickHandler}/></td>
                         </tr>
 
                         <tr>
-                            <td><NumberButtonComponent display={numbersArray[1][0]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[1][1]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[1][2]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={verticalOptions[2]} clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[2][0]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[2][1]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[2][2]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[2][3]}  clickHandler={this.props.clickHandler}/></td>
                         </tr>
 
                         <tr>
-                            <td><NumberButtonComponent display={numbersArray[2][0]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[2][1]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[2][2]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={verticalOptions[3]} clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[3][0]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[3][1]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[3][2]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[3][3]}  clickHandler={this.props.clickHandler}/></td>
                         </tr>
 
                         <tr>
-                            <td colSpan="2"><NumberButtonComponent display={numbersArray[3][0]} clickHandler={this.props.clickHandler}/></td>
-                            <td><NumberButtonComponent display={numbersArray[3][1]} clickHandler={this.props.clickHandler}/></td>
-                            <td><ActionButtonComponent display={verticalOptions[4]} eval={this.props.eval} clickHandler={this.props.clickHandler} /></td>
+                            <td colSpan="2"><NumberButtonComponent display={buttons[4][0]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><NumberButtonComponent display={buttons[4][1]}  clickHandler={this.props.clickHandler}/></td>
+                            <td><ActionButtonComponent display={buttons[4][2]}  eval={this.props.eval} clickHandler={this.props.clickHandler} /></td>
                         </tr>
 
                     </tbody>
