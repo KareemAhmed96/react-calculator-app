@@ -25,18 +25,20 @@ class KeyPadComponent extends React.Component {
         console.log(buttons)
         return (
             <div class="container">
-                
+            
                 <table>
                     <tbody>
                         
                         {buttons.map(
-                            (ele, index) =>
+                            (ele, index) => (
                                 <tr>
                                     {buttons[index].map(
-                                        (ele) => 
+                                        (ele) => (
                                             <td><ButtonComponent display={ele} clickHandler={this.props.clickHandler}/></td>
+                                        )
                                     )}
                                 </tr>
+                            )
                         )}
                         
                     </tbody>
