@@ -9,7 +9,7 @@ class CalcComponent extends React.Component {
     constructor() {
         super();
         this.state = {
-            screen: "",
+            screen: "0",
             pressed: "",
         }
     }
@@ -36,8 +36,13 @@ class CalcComponent extends React.Component {
             return
         }
 
-        this.setState({screen: this.state.screen+event.target.innerHTML})
+        if(this.state.screen == "0") {
+            let withoutZero = this.state.screen.substr(1, this.state.screen.length-1)
+            this.setState({screen: withoutZero+event.target.innerHTML})
+            return
+        }
 
+        this.setState({screen: this.state.screen+event.target.innerHTML})
         this.setState({pressed: event.target.innerHTML})
         
         console.log(event)
@@ -51,7 +56,7 @@ class CalcComponent extends React.Component {
     }
 
     clear = () => {
-        this.setState({screen: ""})
+        this.setState({screen: "0"})
     }
 
     toggleSign() {
@@ -77,7 +82,6 @@ class CalcComponent extends React.Component {
     render() {
         return (
             <div>
-                <h1>Calculator Component</h1>
                 <ScreenComponent res={this.state.screen} />
                 <KeyPadComponent clickHandler={this.getClickedButtton} eval={this.evaluate} pressed={this.state.pressed} />
             </div>

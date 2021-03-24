@@ -28,8 +28,45 @@
   color: #61dafb;
 }
 
-.zeroBtn {
-  
+.main-window {
+  background-color: red;
+}
+
+#output {
+  font-size: 50px;
+  color: rgba(0, 92, 167, 0.76);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  width: 500px;
+  background-color: rgb(128, 128, 128);
+  opacity: 50%;
+  height: 1px;
+  position: center;
+}
+
+button {
+  background-color: grey;
+  box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
+  text-align: center;
+  border-radius: 12%;
+  padding: 50px;
+  font-weight: bolder;
+  font-size: x-large;
+  color: white;
+  border-style: solid;
+  border-width: 8px;
+  border-color: white;
+}
+
+::placeholder {
+  opacity: 50%;
+  letter-spacing: 1px;
 }
 
 @keyframes App-logo-spin {

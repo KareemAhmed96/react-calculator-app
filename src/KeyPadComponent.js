@@ -24,11 +24,8 @@ class KeyPadComponent extends React.Component {
     render() {
         console.log(buttons)
         return (
-            <div>
-                <h1>Button Component</h1>
-                <div>Pressed Button: {this.props.pressed}</div>
-                <br/>
-
+            <div class="container">
+                
                 <table>
                     <tbody>
                         
