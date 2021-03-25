@@ -24,7 +24,7 @@ class KeyPadComponent extends React.Component {
     render() {
         console.log(buttons)
         return (
-            <div class="container">
+            <div class="container keypad">
             
                 <table>
                     <tbody>

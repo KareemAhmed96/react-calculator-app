@@ -14,7 +14,7 @@ class ScreenComponent extends React.Component {
     render() {
 
         return (
-            <div class="container">
+            <div class="container screen">
                 <div id="output">{this.props.res}</div>
             </div>
         )

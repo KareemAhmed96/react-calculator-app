@@ -42,6 +42,10 @@
   justify-content: center;
 }
 
+.screen {
+  margin-top: 40px;
+}
+
 .line {
   width: 500px;
   background-color: rgb(128, 128, 128);
